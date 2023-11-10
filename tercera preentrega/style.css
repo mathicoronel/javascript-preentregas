@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 !important;
+}
+
+body {
+  transition: all 0.3s;
+  background-color: #fefae0;
+}
+
+.d-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#carrusel {
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px #000;
+}
+#carrusel .carousel-control-prev,
+#carrusel .carousel-control-next {
+  width: 5% !important;
+}
+#carrusel .d-item {
+  height: 350px;
+}
+#carrusel .d-item .descripcion-zapatilla {
+  padding: 0;
+}
+#carrusel .d-item .descripcion-zapatilla i {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+#carrusel .d-item .descripcion-zapatilla span {
+  display: flex;
+  align-items: end;
+  color: #000;
+  padding: 10px 0;
+}
+
+#productos-en-oferta {
+  transition: all 0.3s;
+}
+#productos-en-oferta h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+#productos-en-oferta .container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  max-width: 900px;
+  justify-content: center;
+}
+#productos-en-oferta .container .card-zapatillas {
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+}
+#productos-en-oferta .container .card-zapatillas h4 {
+  color: #c1121f;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+#productos-en-oferta .container .card-zapatillas .comprar-zapatilla {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+#productos-en-oferta .container .card-zapatillas img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#productos-en-oferta .container .card-zapatillas h5 {
+  border-bottom: 1px solid #000;
+  padding: 15px 0;
+}
+#productos-en-oferta .container .card-zapatillas .descripcion {
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+#productos-en-oferta .container .card-zapatillas span {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+#productos-destacados h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+#productos-destacados .container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  width: 100%;
+  justify-content: center;
+}
+#productos-destacados .container .card-zapatillas {
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+}
+#productos-destacados .container .card-zapatillas h4 {
+  color: #c1121f;
+  padding-bottom: 10px;
+}
+#productos-destacados .container .card-zapatillas .comprar-zapatilla {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+#productos-destacados .container .card-zapatillas img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom: 1px solid #000;
+}
+#productos-destacados .container .card-zapatillas h5 {
+  border-bottom: 1px solid #000;
+  padding: 15px 0;
+}
+#productos-destacados .container .card-zapatillas .descripcion {
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+#productos-destacados .container .card-zapatillas span {
+  font-size: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+.titulo-productos,
+.subtitulo-productos {
+  text-align: center;
+  padding: 10px;
+}
+
+.titulo-productos {
+  margin-top: 1.5rem;
+}
+
+.productos .container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  width: 100%;
+  justify-content: center;
+}
+.productos .container .card-zapatillas {
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+}
+.productos .container .card-zapatillas h4 {
+  color: #c1121f;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.productos .container .card-zapatillas .comprar-zapatilla {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.productos .container .card-zapatillas img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productos .container .card-zapatillas h5 {
+  border-bottom: 1px solid #000;
+  padding: 15px 0;
+}
+.productos .container .card-zapatillas .descripcion {
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.productos .container .card-zapatillas span {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+#contenedor-texto-carrito {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.carrito-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  justify-content: center;
+  margin-left: 30%;
+}
+.carrito-contenedor .card-zapatillas {
+  width: 100%;
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+}
+.carrito-contenedor .card-zapatillas .numero-oferta {
+  color: #c1121f;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.carrito-contenedor .card-zapatillas .eliminar-producto {
+  margin: 0;
+  border-radius: 10px;
+  padding: 5px;
+}
+.carrito-contenedor .card-zapatillas img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 5px;
+}
+.carrito-contenedor .card-zapatillas h5 {
+  border-bottom: 1px solid #000;
+  padding: 15px 0;
+}
+.carrito-contenedor .card-zapatillas .descripcion {
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.carrito-contenedor .card-zapatillas span {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.carrito-contenedor .card-zapatillas .producto-cantidad {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.carrito-contenedor.ocultar {
+  display: none;
+}
+
+.card-zapatillas.ocultar {
+  display: none;
+}
+
+#contenedor-texto-carrito.ocultar {
+  display: none;
+}
+
+.numero-oferta.ocultar {
+  display: none;
+}
+
+#producto-cantidad.ocultar {
+  display: none;
+}
+
+.contenedor-finalizar-compra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contenedor-finalizar-compra .contenedor-vaciar-carrito {
+  padding: 1rem;
+}
+.contenedor-finalizar-compra .contenedor-vaciar-carrito #vaciar-carrito {
+  display: flex;
+  justify-content: start;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #283618;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #fff;
+  border: 0;
+  font-weight: 600;
+}
+.contenedor-finalizar-compra .contenedor-precio-total {
+  margin: 0;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.contenedor-finalizar-compra .contenedor-precio-total #precio-total {
+  display: flex;
+  background-color: #606c38;
+  color: #fbf9ea;
+  text-transform: uppercase;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 400;
+  gap: 1rem;
+}
+.contenedor-finalizar-compra #finalizar-compra {
+  border: 0;
+  border-top-right-radius: 10px;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #283618;
+  color: #fbf9ea;
+  padding: 1.2rem;
+  font-weight: 500;
+}
+
+.contenedor-vaciar-carrito.ocultar {
+  display: none;
+}
+.contenedor-vaciar-carrito.ocultar #vaciar-carrito {
+  display: none;
+}
+
+.contenedor-finalizar-compra.ocultar {
+  display: none;
+}
+.contenedor-finalizar-compra.ocultar .contenedor-precio-total {
+  display: none;
+}
+.contenedor-finalizar-compra.ocultar .contenedor-precio-total #precio-total {
+  display: none;
+}
+.contenedor-finalizar-compra.ocultar #finalizar-compra {
+  display: none;
+}
+
+.navbar-nav {
+  background-color: #faedcd;
+  border-bottom: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+.navbar-nav .navbar-lista {
+  margin: 0;
+}
+.navbar-nav .navbar-lista .navbar-items {
+  list-style: none;
+  display: inline;
+  padding: 0 30px;
+}
+.navbar-nav .navbar-lista .navbar-items a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.navbar-nav .navbar-lista .navbar-items a i {
+  padding: 0 7px;
+  font-size: 1.4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #ffffff;
+}
+.navbar-nav .navbar-lista .navbar-items a:hover {
+  background-color: #8a817c;
+  border-radius: 5px;
+}
+.navbar-nav .navbar-lista .modoOscuro {
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.titulo-contacto {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.form-contenedor {
+  margin-top: 2rem;
+}
+.form-contenedor .form-label {
+  font-weight: 600;
+}
+.form-contenedor .form-control {
+  resize: none;
+  background-color: #7a7a7a;
+  color: #fff;
+}
+.form-contenedor .form-control::-moz-placeholder {
+  color: #fff;
+}
+.form-contenedor .form-control::placeholder {
+  color: #fff;
+}
+
+body.modo-oscuro {
+  transition: all 0.3s;
+  background-color: #000;
+}
+body.modo-oscuro .titulo-productos {
+  color: #fff;
+}
+body.modo-oscuro .subtitulo-productos {
+  color: #fff;
+}
+body.modo-oscuro .navbar-nav {
+  transition: all 0.3s;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+}
+body.modo-oscuro .navbar-nav .navbar-items a {
+  color: #fff;
+}
+body.modo-oscuro .navbar-nav .navbar-items a:hover {
+  background-color: #f4f3ee;
+  color: #000;
+}
+body.modo-oscuro #productos-en-oferta {
+  transition: all 0.3s;
+}
+body.modo-oscuro #productos-en-oferta h1 {
+  color: #fff;
+}
+body.modo-oscuro #productos-en-oferta .container .card-zapatillas {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+body.modo-oscuro #productos-en-oferta .container .card-zapatillas h5 {
+  padding: 15px 0;
+  border-bottom: 1px solid #fff;
+}
+body.modo-oscuro #productos-en-oferta .container h4 {
+  color: #c75146;
+}
+body.modo-oscuro #productos-destacados {
+  transition: all 0.3s;
+}
+body.modo-oscuro #productos-destacados h1 {
+  color: #fff;
+}
+body.modo-oscuro #productos-destacados .container .card-zapatillas {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+body.modo-oscuro #productos-destacados .container .card-zapatillas h5 {
+  padding: 15px 0;
+  border-bottom: 1px solid #fff;
+}
+body.modo-oscuro #productos-destacados .container h4 {
+  color: #fff;
+}
+body.modo-oscuro .productos .container .card-zapatillas {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+body.modo-oscuro .productos .container .card-zapatillas h5 {
+  padding: 15px 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+body.modo-oscuro .productos .container .card-zapatillas p {
+  color: #fff;
+}
+body.modo-oscuro .productos .container .card-zapatillas span strong {
+  color: #fff;
+}
+body.modo-oscuro .productos .container h4 {
+  color: #c75146;
+}
+body.modo-oscuro #contenedor-texto-carrito {
+  color: #fff;
+}
+body.modo-oscuro .carrito-contenedor .card-zapatillas {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+body.modo-oscuro .carrito-contenedor .producto-cantidad {
+  font-weight: 700;
+  font-size: 1rem;
+}
+body.modo-oscuro .carrito-contenedor h5 {
+  padding: 15px 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+body.modo-oscuro .carrito-contenedor p {
+  color: #fff;
+}
+body.modo-oscuro .carrito-contenedor span strong {
+  color: #fff;
+}
+body.modo-oscuro .contenedor-finalizar-compra .contenedor-precio-total #precio-total {
+  background-color: #dbc5a9;
+  color: #000;
+}
+body.modo-oscuro .contenedor-finalizar-compra .contenedor-vaciar-carrito #vaciar-carrito {
+  background-color: #151c0d;
+}
+body.modo-oscuro #finalizar-compra {
+  background-color: #4b2d12;
+}
+body.modo-oscuro .titulo-contacto {
+  color: #fff;
+}
+body.modo-oscuro .form-contenedor {
+  margin-top: 2rem;
+}
+body.modo-oscuro .form-contenedor .form-label {
+  color: #fff;
+}
+body.modo-oscuro .form-contenedor .form-control {
+  background-color: #575757;
+  border-color: #575757;
+  color: #fff;
+}
+body.modo-oscuro .form-contenedor .form-control::-moz-placeholder {
+  color: #fff;
+}
+body.modo-oscuro .form-contenedor .form-control::placeholder {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
