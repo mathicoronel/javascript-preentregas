@@ -4,7 +4,7 @@ const productos = [
         precio: 45000,
         id: 0,
         descuento: 30,
-        imagen: "../img/zapatillas-tensaur.png",
+        imagen: "../img/zapatillas-tensaur.webp",
         cantidad: 1
     },
     {
@@ -12,7 +12,7 @@ const productos = [
         precio: 40000,
         id: 1,
         descuento: 30,
-        imagen: "../img/zapatillas-avryn.png",
+        imagen: "../img/zapatillas-avryn.webp",
         cantidad: 1
     },
     {
@@ -20,77 +20,77 @@ const productos = [
         precio: 42000,
         id: 2,
         descuento: 30,
-        imagen: "../img/zapatillas-response.png",
+        imagen: "../img/zapatillas-response.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Forum marrón",
         precio: 65000,
         id: 3,
-        imagen: "../img/forum-marron.png",
+        imagen: "../img/forum-marron.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Superstar",
         precio: 50000,
         id: 4,
-        imagen: "../img/superstar-negras.png",
+        imagen: "../img/superstar-negras.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Forum blanco",
         precio: 77000,
         id: 5,
-        imagen: "../img/forum-blancas.png",
+        imagen: "../img/forum-blancas.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Duramo 10",
         precio: 51000,
         id: 6,
-        imagen: "../img/duramo10.png",
+        imagen: "../img/duramo10.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Court plataforma",
         precio: 60000,
         id: 7,
-        imagen: "../img/court-plataforma.png",
+        imagen: "../img/court-plataforma.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Gamecourt 2",
         precio: 69000,
         id: 8,
-        imagen: "../img/gamecourt2.png",
+        imagen: "../img/gamecourt2.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Run 60s",
         precio: 47000,
         id: 9,
-        imagen: "../img/run60s.png",
+        imagen: "../img/run60s.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Stan Smith",
         precio: 71000,
         id: 10,
-        imagen: "../img/stan-smith.png",
+        imagen: "../img/stan-smith.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas USA 84",
         precio: 53000,
         id: 11,
-        imagen: "../img/usa84.png",
+        imagen: "../img/usa84.webp",
         cantidad: 1
     },
     {
         nombre: "Zapatillas Ultraboost",
         precio: 68000,
         id: 12,
-        imagen: "../img/ultraboost.png",
+        imagen: "../img/ultraboost.webp",
         cantidad: 1
     }
 ];

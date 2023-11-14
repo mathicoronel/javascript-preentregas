@@ -378,6 +378,7 @@ body {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 .navbar-nav .navbar-lista .navbar-items a i {
   padding: 0 7px;
@@ -391,6 +392,7 @@ body {
 .navbar-nav .navbar-lista .navbar-items a:hover {
   background-color: #8a817c;
   border-radius: 5px;
+  transition: all 0.3s;
 }
 .navbar-nav .navbar-lista .modoOscuro {
   border-radius: 4px;
@@ -420,6 +422,23 @@ body {
   color: #fff;
 }
 
+.footer {
+  color: #000;
+  margin: 1rem 0;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+.footer .footer-titulo {
+  margin-top: 1rem;
+  opacity: 40%;
+}
+.footer .footer-texto-contenedor {
+  opacity: 40%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
 body.modo-oscuro {
   transition: all 0.3s;
   background-color: #000;
@@ -437,10 +456,12 @@ body.modo-oscuro .navbar-nav {
 }
 body.modo-oscuro .navbar-nav .navbar-items a {
   color: #fff;
+  transition: all 0.3s;
 }
 body.modo-oscuro .navbar-nav .navbar-items a:hover {
   background-color: #f4f3ee;
   color: #000;
+  transition: all 0.3s;
 }
 body.modo-oscuro #productos-en-oferta {
   transition: all 0.3s;
@@ -549,4 +570,8 @@ body.modo-oscuro .form-contenedor .form-control::-moz-placeholder {
 }
 body.modo-oscuro .form-contenedor .form-control::placeholder {
   color: #fff;
+}
+body.modo-oscuro .footer {
+  color: #fff;
+  border-top: 1px solid #fff;
 }/*# sourceMappingURL=style.css.map */

@@ -425,6 +425,7 @@ body {
                 text-decoration: none;
                 color: #000;
                 text-transform: uppercase;
+                transition: all 0.3s;
 
                 i {
                     padding: 0 7px;
@@ -437,6 +438,7 @@ body {
                 &:hover {
                     background-color: #8a817c;
                     border-radius: 5px;
+                    transition: all 0.3s;
                 }
             }
         }
@@ -471,6 +473,25 @@ body {
     }
 }
 
+.footer{
+    color: #000;
+    margin: 1rem 0;
+    border-top: 1px solid #000;
+    text-align: center;
+
+    .footer-titulo{
+        margin-top: 1rem;
+        opacity: 40%;
+    }
+
+    .footer-texto-contenedor{
+        opacity: 40%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
 
 // MODO OSCURO
 body.modo-oscuro {
@@ -493,10 +514,12 @@ body.modo-oscuro {
         .navbar-items {
             a {
                 color: #fff;
+                transition: all 0.3s;
 
                 &:hover {
                     background-color: #f4f3ee;
                     color: #000;
+                    transition: all 0.3s;
                 }
             }
         }
@@ -654,5 +677,10 @@ body.modo-oscuro {
                 color: #fff;
             }
         }
+    }
+
+    .footer{
+        color: #fff;
+        border-top: 1px solid #fff;
     }
 }
