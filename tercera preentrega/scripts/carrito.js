@@ -8,6 +8,7 @@ const cardZapatillas = document.querySelector(".card-zapatillas")
 const precioTotal = document.querySelector("#precio-total")
 let botonVaciarCarrito = document.querySelector("#vaciar-carrito")
 let contenedorVaciarCarrito = document.querySelector(".contenedor-vaciar-carrito")
+let botonFinalizarCompra = document.querySelector("#finalizar-compra")
 
 // función para que se actualice el precio total mientras se agregan productos al carrito
 function actualizarPrecios() {
@@ -17,16 +18,28 @@ function actualizarPrecios() {
         <div class="contenedor-precio-total">
             <h3 id="precio-total">Total: <strong>$${calcularTotal}</strong></h3>
         </div>
-        <button id="finalizar-compra">Finalizar compra</button>
     </div>`
 }
 
 function vaciarCarrito() {
     botonVaciarCarrito.addEventListener("click", () => {
         if (productosCarritoJSON && productosCarritoJSON.length > 0) {
-            productosCarritoJSON = [];
-            localStorage.removeItem("productos-carrito");
-            
+            Swal.fire({
+                title: "¿Estás seguro que quieres eliminar tu carrito?",
+                showDenyButton: true,
+                showCancelButton: false,
+                confirmButtonText: "Si, eliminar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    productosCarritoJSON = [];
+                    localStorage.removeItem("productos-carrito");
+                    Swal.fire("Carrito eliminado", "", "success");
+
+                textoCarritoVacio.classList.remove("ocultar")
+                carritoContenedor.classList.toggle("ocultar")
+                contenedorFinalizarCompra.classList.toggle("ocultar")
+                }
+            });
             subirProductoCarrito();
             actualizarPrecios();
         }
@@ -84,11 +97,36 @@ function subirProductoCarrito() {
         }
         vaciarCarrito()
         actualizarPrecios();
+        finalizarCompra()
     } else {
         textoCarritoVacio.classList.remove("ocultar")
         carritoContenedor.classList.toggle("ocultar")
         contenedorFinalizarCompra.classList.toggle("ocultar")
     }
+}
+
+function finalizarCompra() {
+    botonFinalizarCompra.addEventListener("click", () => {
+        Swal.fire({
+            title: "¿Estás seguro que quieres realizar la compra?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Si, finalizar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                productosCarritoJSON = [];
+                localStorage.removeItem("productos-carrito");
+                Swal.fire("Muchas gracias por tu compra", "", "success");
+
+            textoCarritoVacio.classList.remove("ocultar")
+            carritoContenedor.classList.toggle("ocultar")
+            contenedorFinalizarCompra.classList.toggle("ocultar")
+            }
+        });
+        subirProductoCarrito();
+        actualizarPrecios();
+    
+    })
 }
 
 function eliminarProducto(boton) {

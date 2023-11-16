@@ -362,22 +362,23 @@ body {
             color: #fbf9ea;
             text-transform: uppercase;
             border-bottom-left-radius: 10px;
-            border-top-right-radius: 10px;
             font-weight: 400;
             gap: 1rem;
         }
+
+        #finalizar-compra {
+            border: 0;
+            font-size: 1.6rem;
+            border-top-right-radius: 10px;
+            text-transform: uppercase;
+            margin: 0;
+            background-color: #283618;
+            color: #fbf9ea;
+            padding: 1.2rem;
+            font-weight: 500;
+        }
     }
 
-    #finalizar-compra {
-        border: 0;
-        border-top-right-radius: 10px;
-        text-transform: uppercase;
-        margin: 0;
-        background-color: #283618;
-        color: #fbf9ea;
-        padding: 1.2rem;
-        font-weight: 500;
-    }
 }
 
 .contenedor-vaciar-carrito.ocultar {
@@ -398,11 +399,12 @@ body {
         #precio-total {
             display: none
         }
+
+        #finalizar-compra {
+            display: none;
+        }
     }
 
-    #finalizar-compra {
-        display: none;
-    }
 }
 
 .navbar-nav {
@@ -644,6 +646,10 @@ body.modo-oscuro {
                 background-color: #dbc5a9;
                 color: #000;
             }
+
+            #finalizar-compra {
+                background-color: #4b2d12;
+            }
         }
 
         .contenedor-vaciar-carrito {
@@ -651,10 +657,6 @@ body.modo-oscuro {
                 background-color: #151c0d;
             }
         }
-    }
-
-    #finalizar-compra {
-        background-color: #4b2d12;
     }
 
     .titulo-contacto {

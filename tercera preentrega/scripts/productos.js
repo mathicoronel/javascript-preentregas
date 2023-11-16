@@ -24,7 +24,7 @@ const productos = [
         cantidad: 1
     },
     {
-        nombre: "Zapatillas Forum marrón",
+        nombre: "Zapatillas Forum (marrón)",
         precio: 65000,
         id: 3,
         imagen: "../img/forum-marron.webp",
@@ -38,7 +38,7 @@ const productos = [
         cantidad: 1
     },
     {
-        nombre: "Zapatillas Forum blanco",
+        nombre: "Zapatillas Forum (blanco)",
         precio: 77000,
         id: 5,
         imagen: "../img/forum-blancas.webp",
