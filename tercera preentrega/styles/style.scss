@@ -71,10 +71,9 @@ body {
         text-transform: uppercase;
     }
 
-    .container {
+    .container-oferta {
         display: grid;
         grid-template-columns: repeat(3, 300px);
-        max-width: 900px;
         justify-content: center;
 
         .card-zapatillas {
@@ -129,7 +128,7 @@ body {
         text-transform: uppercase;
     }
 
-    .container {
+    .container-destacados {
         display: grid;
         grid-template-columns: repeat(3, 300px);
         width: 100%;
@@ -188,7 +187,7 @@ body {
 }
 
 .productos {
-    .container {
+    .container-productos {
         display: grid;
         grid-template-columns: repeat(3, 300px);
         width: 100%;
@@ -534,7 +533,7 @@ body.modo-oscuro {
             color: #fff;
         }
 
-        .container {
+        .container-oferta {
             .card-zapatillas {
                 border: 1px solid #fff;
                 background-color: #000;
@@ -559,7 +558,7 @@ body.modo-oscuro {
             color: #fff;
         }
 
-        .container {
+        .container-destacados {
             .card-zapatillas {
                 border: 1px solid #fff;
                 background-color: #000;
@@ -578,7 +577,7 @@ body.modo-oscuro {
     }
 
     .productos {
-        .container {
+        .container-productos {
             .card-zapatillas {
                 border: 1px solid #fff;
                 background-color: #000;

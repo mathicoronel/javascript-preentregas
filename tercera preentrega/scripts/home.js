@@ -1,39 +1,19 @@
 let productos = []
 
-const llamadaJson = (url, generarNodos, container) => {
+const llamadaJson = (url) => {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            productos = data;
-            generarNodos(productos, container);
+            productos = data
             agregarProducto(productos)
         })
-};
-
-const cardProductos = document.querySelector(".container-productos")
-
-function nodosCards(productos, container) {
-    const nodos = productos.reduce((acc, element) => {
-        return acc + `
-        <div class="card-zapatillas">
-        <img src="${element.imagen}" alt="${element.nombre}">
-        <h5 class="descripcion">${element.nombre}</h5>
-        <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, error.</p>
-        <span><strong>$${element.precio}</strong></span><br>
-        <button class="comprar-zapatilla ms-auto" id="${element.id}">Añadir al carrito<i
-        class="agregar-carrito fa-solid fa-cart-shopping"></i></button>
-    </div>
-    `
-    }, "")
-    
-    container.innerHTML = nodos;
 }
-llamadaJson("../scripts/productos.json", nodosCards, cardProductos);
+
+llamadaJson("./scripts/productos.json")
 
 const productosCarritoJSON = JSON.parse(localStorage.getItem("productos-carrito"))
 let carrito = productosCarritoJSON || []
 
-// FUNCIÓN PARA QUE LOS PRODUCTOS SE AÑADAN AL CARRITO EN LOCAL STORAGE
 function agregarProducto() {
     let comprarZapatilla = document.querySelectorAll(".comprar-zapatilla");
     comprarZapatilla.forEach((boton) => {
@@ -46,7 +26,7 @@ function agregarProducto() {
                 Toastify({
                     text: `${encontrarProducto.nombre} añadido al carrito`,
                     duration: 2000,
-                    destination: "./carrito.html",
+                    destination: "./pages/carrito.html",
                     newWindow: false,
                     close: true,
                     gravity: "top", // `top` or `bottom`
@@ -90,12 +70,3 @@ if(localStorage.getItem("modo-oscuro") === "true") {
 } else {
     document.body.classList.remove("modo-oscuro")
 }
-
-// validaciones para la página contacto
-const inputEmail = document.querySelector("#emailInput")
-const inputNombre = document.querySelector("#nombreInput")
-const mensajeInput = document.querySelector("#mensajeInput")
-
-inputNombre.minLength = 2
-inputEmail.type = "email"
-mensajeInput.minLength = 10
