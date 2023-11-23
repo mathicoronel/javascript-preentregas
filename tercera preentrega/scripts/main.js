@@ -5,8 +5,9 @@ const llamadaJson = (url, generarNodos, container) => {
         .then(response => response.json())
         .then(data => {
             productos = data;
-            generarNodos(productos, container);
+            generarNodos(productos, container)
             agregarProducto(productos)
+            ordenarProductos()
         })
 };
 
@@ -14,21 +15,22 @@ const cardProductos = document.querySelector(".container-productos")
 
 function nodosCards(productos, container) {
     const nodos = productos.reduce((acc, element) => {
+        let descuento = element.descuento ? `<h4 class="numero-oferta">${element.descuento}% OFF</h4>` : ''
         return acc + `
         <div class="card-zapatillas">
-        <img src="${element.imagen}" alt="${element.nombre}">
-        <h5 class="descripcion">${element.nombre}</h5>
-        <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, error.</p>
-        <span><strong>$${element.precio}</strong></span><br>
-        <button class="comprar-zapatilla ms-auto" id="${element.id}">Añadir al carrito<i
-        class="agregar-carrito fa-solid fa-cart-shopping"></i></button>
+            ${descuento}
+            <img src="${element.imagen}" alt="${element.nombre}">
+            <h5 class="descripcion">${element.nombre}</h5>
+            <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, error.</p>
+            <span><strong>$${element.precio}</strong></span><br>
+            <button class="comprar-zapatilla ms-auto" id="${element.id}">Añadir al carrito<i class="agregar-carrito fa-solid fa-cart-shopping"></i></button>
     </div>
     `
     }, "")
     
-    container.innerHTML = nodos;
+    container.innerHTML = nodos
 }
-llamadaJson("../scripts/productos.json", nodosCards, cardProductos);
+llamadaJson("../scripts/productos.json", nodosCards, cardProductos)
 
 const productosCarritoJSON = JSON.parse(localStorage.getItem("productos-carrito"))
 let carrito = productosCarritoJSON || []
@@ -70,6 +72,29 @@ function agregarProducto() {
         })
     })
 }
+
+// FUNCIÓN PARA ORDENAR PRODUCTOS
+const ordenProductos = document.querySelector("#ordenar-productos")
+
+function ordenarProductos () {
+    const productosOrdenados = [...productos]
+    ordenProductos.addEventListener("click", () => {
+        if (ordenProductos.value === "asc") {
+            productosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre))
+        } 
+        else if (ordenProductos.value === "des") {
+            productosOrdenados.sort((a, b) => b.nombre.localeCompare(a.nombre))
+        }
+        else if (ordenProductos.value === "off") {
+            productosOrdenados.sort((a, b) => (b.descuento || 0) - (a.descuento || 0))
+        }
+        else if (ordenProductos.value === "defecto") {
+            llamadaJson("../scripts/productos.json", nodosCards, cardProductos)
+        }
+        nodosCards(productosOrdenados, cardProductos)
+    })
+}
+
 
 // MODO OSCURO
 const botonModoOscuro = document.querySelector(".modoOscuro")
