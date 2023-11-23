@@ -1,25 +1,23 @@
 [
     {
-        "nombre": "Zapatillas Tensaur",
-        "precio": 45000,
-        "id": 0,
-        "descuento": 30,
-        "imagen": "../img/zapatillas-tensaur.webp",
+        "nombre": "Zapatillas Stan Smith",
+        "precio": 71000,
+        "id": 10,
+        "imagen": "../img/stan-smith.webp",
         "cantidad": 1
     },
     {
-        "nombre": "Zapatillas Avryn",
-        "precio": 40000,
-        "id": 1,
-        "descuento": 30,
-        "imagen": "../img/zapatillas-avryn.webp",
+        "nombre": "Zapatillas Duramo 10",
+        "precio": 51000,
+        "id": 6,
+        "imagen": "../img/duramo10.webp",
         "cantidad": 1
     },
     {
         "nombre": "Zapatillas Response",
         "precio": 42000,
         "id": 2,
-        "descuento": 30,
+        "descuento": 20,
         "imagen": "../img/zapatillas-response.webp",
         "cantidad": 1
     },
@@ -45,10 +43,11 @@
         "cantidad": 1
     },
     {
-        "nombre": "Zapatillas Duramo 10",
-        "precio": 51000,
-        "id": 6,
-        "imagen": "../img/duramo10.webp",
+        "nombre": "Zapatillas Avryn",
+        "precio": 40000,
+        "id": 1,
+        "descuento": 30,
+        "imagen": "../img/zapatillas-avryn.webp",
         "cantidad": 1
     },
     {
@@ -73,10 +72,11 @@
         "cantidad": 1
     },
     {
-        "nombre": "Zapatillas Stan Smith",
-        "precio": 71000,
-        "id": 10,
-        "imagen": "../img/stan-smith.webp",
+        "nombre": "Zapatillas Tensaur",
+        "precio": 45000,
+        "id": 0,
+        "descuento": 15,
+        "imagen": "../img/zapatillas-tensaur.webp",
         "cantidad": 1
     },
     {
