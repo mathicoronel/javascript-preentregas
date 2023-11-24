@@ -192,6 +192,7 @@ body {
   font-weight: 600;
   background-color: #212529;
   color: #fff;
+  cursor: pointer;
 }
 
 .productos .container-productos {
@@ -413,6 +414,7 @@ body {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
+  padding: 0.5rem;
   transition: all 0.3s;
 }
 .navbar-nav .navbar-lista .navbar-items a i {
@@ -425,13 +427,20 @@ body {
   color: #ffffff;
 }
 .navbar-nav .navbar-lista .navbar-items a:hover {
-  background-color: #8a817c;
+  background-color: #d1c4bc;
+  color: #000;
   border-radius: 5px;
   transition: all 0.3s;
 }
 .navbar-nav .navbar-lista .modoOscuro {
   border-radius: 4px;
   padding: 5px;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+.navbar-nav .navbar-lista .modoOscuro i {
+  color: #000;
 }
 
 .titulo-contacto {
@@ -440,6 +449,9 @@ body {
 }
 
 .form-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 .form-contenedor .form-label {
@@ -494,9 +506,17 @@ body.modo-oscuro .navbar-nav .navbar-items a {
   transition: all 0.3s;
 }
 body.modo-oscuro .navbar-nav .navbar-items a:hover {
-  background-color: #f4f3ee;
+  background-color: #ced4da;
   color: #000;
   transition: all 0.3s;
+}
+body.modo-oscuro .navbar-nav .modoOscuro {
+  background-color: #adb5bd;
+  color: #000;
+  border-color: #fff;
+}
+body.modo-oscuro .navbar-nav .modoOscuro i {
+  color: #000;
 }
 body.modo-oscuro #productos-en-oferta {
   transition: all 0.3s;
@@ -536,6 +556,11 @@ body.modo-oscuro #productos-destacados .container-destacados h4 {
 }
 body.modo-oscuro .label-ordenar {
   color: #fff;
+}
+body.modo-oscuro #ordenar-productos {
+  border: 1px solid #000;
+  background-color: #adb5bd;
+  color: #000;
 }
 body.modo-oscuro .productos .container-productos .card-zapatillas {
   border: 1px solid #fff;

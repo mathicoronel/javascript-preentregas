@@ -69,9 +69,6 @@ function subirProductoCarrito() {
                     </div>
                 </div>
                 `
-                boton.innerHTML = `
-                <button class></button>
-                `
             } else if (producto.cantidad > 1) {
                 card.innerHTML = `
                 <div class="carrito-contenedor">

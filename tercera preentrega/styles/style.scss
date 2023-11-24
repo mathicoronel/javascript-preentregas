@@ -176,6 +176,7 @@ body {
         font-weight: 600;
         background-color: #212529;
         color: #fff;
+        cursor: pointer;
     }
 }
 
@@ -340,6 +341,7 @@ body {
                 text-decoration: none;
                 color: #000;
                 text-transform: uppercase;
+                padding: 0.5rem;
                 transition: all 0.3s;
 
                 i {
@@ -351,7 +353,8 @@ body {
                 }
 
                 &:hover {
-                    background-color: #8a817c;
+                    background-color: #d1c4bc;
+                    color: #000;
                     border-radius: 5px;
                     transition: all 0.3s;
                 }
@@ -361,6 +364,13 @@ body {
         .modoOscuro {
             border-radius: 4px;
             padding: 5px;
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+
+            i{
+                color: #000;
+            }
         }
     }
 }
@@ -371,6 +381,9 @@ body {
 }
 
 .form-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
 
     .form-label {
@@ -432,10 +445,20 @@ body.modo-oscuro {
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: #f4f3ee;
+                    background-color: #ced4da;
                     color: #000;
                     transition: all 0.3s;
                 }
+            }
+        }
+
+        .modoOscuro {
+            background-color: #adb5bd;
+            color: #000;
+            border-color: #fff;
+
+            i{
+                color: #000;
             }
         }
     }
@@ -492,6 +515,12 @@ body.modo-oscuro {
 
         .label-ordenar{
             color: #fff;
+        }
+
+        #ordenar-productos{
+            border: 1px solid #000;
+            background-color: #adb5bd;
+            color: #000;
         }
 
     .productos {
